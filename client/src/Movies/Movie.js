@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import MovieDetails from './MovieDetails';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     // console.log(props);
@@ -38,7 +38,7 @@ const Movie = (props) => {
   return (
     <div className="save-wrapper">
 
-    <MovieDetails movie= {movie} />
+      <MovieDetails movie={movie} />
 
       {/* <div className="movie-card">
         <h2>{title}</h2>
@@ -57,7 +57,7 @@ const Movie = (props) => {
         ))}
       </div> */}
 
-      <div onClick= { (e) => {saveMovie()} } className="save-button">Save</div>
+      <div onClick={(e) => { saveMovie() }} className="save-button">Save</div>
     </div>
   );
 }
